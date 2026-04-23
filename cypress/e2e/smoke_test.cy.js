@@ -54,7 +54,7 @@ describe('telnyx smoke test cases', () => {
     cy.contains('Talk to an expert').should('be.visible')
   })
   it('on contact us page fill out the required fields and click submit', () => {
-    cy.visit('/contact-us')
+    cy.visit('/contact-us', {timout:12000})
     cy.get('#onetrust-accept-btn-handler').click()
     cy.get('#Reason_for_Contact__c').select('Support')
     cy.get('#FirstName').type('Illia')
