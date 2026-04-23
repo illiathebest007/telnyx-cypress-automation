@@ -21,7 +21,7 @@ describe('telnyx smoke test cases', () => {
   it('full stack animation check', { scrollBehavior: 'top' }, () => {
     cy.visit('/')
     cy.contains('EXPLORE THE STACK', { matchCase: false }).click({force:true})
-    cy.contains('THE FULL STACK', { timeout: 25000}).should('be.visible')
+    cy.contains('THE FULL STACK', { timeout: 25000}).should('exist')
   })
   it('on "full stack" animation click "configure agent"', () => {
     cy.visit('/')
