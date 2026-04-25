@@ -2,7 +2,7 @@
 
 Project contains automated Smoke Tests for the Telnyx website, built using Cypress and integrated with GitHub Actions for CI/CD.
 
-Before you begin, ensure you have the following installed: node.js and git
+Before you begin, ensure you have the following installed: node.js, cypress and git
 
 1. Clone the repository:
 `git clone [URL]`
