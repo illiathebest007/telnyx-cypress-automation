@@ -1,35 +1,40 @@
-🚀 Telnyx UI Automation Project
-This project contains an automated Smoke Test suite for the Telnyx.com website. It is designed to handle localization (US/EU) and dynamic elements, integrated with GitHub Actions and Cypress Cloud.
+# 🚀 Telnyx UI Automation Project
 
-🛠 Prerequisites & Installation
-1. Environment Setup
-Node.js: v18 or higher.
+[![Telnyx Smoke Tests](https://github.com/illiathebest007/telnyx-cypress-automation/actions/workflows/main.yaml/badge.svg)](https://github.com/illiathebest007/telnyx-cypress-automation/actions)
+[![Cypress Cloud](https://img.shields.io/badge/Cypress-Cloud-brightgreen)](https://cloud.cypress.io/projects/1oj5xg)
 
-Git: Installed and configured.
+This project contains an automated Smoke Test suite for the **Telnyx.com** website. It is designed to handle localization (US/EU) and dynamic elements, integrated with **GitHub Actions** and **Cypress Cloud**.
 
-2. Project Installation
+## 🛠 Prerequisites & Installation
+
+### 1. Environment Setup
+- **Node.js**: v18 or higher.
+- **Git**: Installed and configured.
+
+### 2. Project Installation
 Clone the repo and install all dependencies (including Cypress):
-
-Bash
-git clone https://github.com/illiathebest007/telnyx-cypress-automation.git
+```bash
+git clone [https://github.com/illiathebest007/telnyx-cypress-automation.git](https://github.com/illiathebest007/telnyx-cypress-automation.git)
 cd test_squad_telnyx_cypress
 npm install
+```
 3. Cypress Verification
 To ensure Cypress was installed correctly and its binary is ready:
 
-Bash
+```Bash
 npx cypress verify
 🧪 Running Tests
 Graphical User Interface (GUI)
 To debug and watch tests in a real browser:
-
-Bash
+```
+```Bash
 npx cypress open
 Headless Mode (CLI)
 To run tests in the background (as they run in GitHub Actions):
-
-Bash
+```
+```Bash
 npx cypress run
+```
 💡 Technical Solutions & Stability
 During development, several "flaky" test issues were resolved to ensure stability in CI/CD:
 
@@ -43,12 +48,13 @@ Custom Timeouts: Increased pageLoadTimeout and added specific timeout (up to 120
 
 🔄 Development Workflow
 To update the project and trigger the automated pipeline:
-
+```
 git add .
 
-git commit -m "update docs"
+git commit -m "your message"
 
 git push origin main
+```
 
 ✅ Future Improvements (TODO)
 Next steps to make the project production-ready:
