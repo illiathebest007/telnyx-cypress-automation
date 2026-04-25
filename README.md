@@ -36,7 +36,7 @@ To run tests in the background (as they run in GitHub Actions):
 npx cypress run
 ```
 💡 Technical Solutions & Stability
-During development, several "flaky" test issues were resolved to ensure stability in CI/CD:
+*During development, several "flaky" test issues were resolved to ensure stability in CI/CD:
 
 Cookie Banner Handling: Used stable ID selectors (#onetrust-accept-btn-handler) for reliable interaction across different regions.
 
@@ -44,7 +44,7 @@ Handling Hidden Elements: Applied { force: true } for elements covered by animat
 
 Network Resilience: Configured retries: { runMode: 2 } in cypress.config.js to handle transient server errors like 502 Bad Gateway.
 
-Custom Timeouts: Increased pageLoadTimeout and added specific timeout (up to 120s) for heavy pages like /contact-us.
+Custom Timeouts: Increased pageLoadTimeout and added specific timeout (up to 120s) for heavy pages like /contact-us. *
 
 🔄 Development Workflow
 To update the project and trigger the automated pipeline:
@@ -59,10 +59,10 @@ git push origin main
 ✅ Future Improvements (TODO)
 Next steps to make the project production-ready:
 
-[ ] Page Object Pattern (POP): Refactor to separate UI selectors from test logic.
+*[ ] Page Object Pattern (POP): Refactor to separate UI selectors from test logic.
 
 [ ] BDD / Gherkin: Integrate Cucumber for better test readability.
 
 [ ] Parallelization: Configure multi-threaded execution in CI/CD to save time.
 
-[ ] Advanced Reporting: Add Allure reports for professional visualization.
+[ ] Advanced Reporting: Add Allure reports for professional visualization.*
