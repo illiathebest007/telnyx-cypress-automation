@@ -46,7 +46,7 @@ To update the project and trigger the automated pipeline:
 
 git add .
 
-git commit -m "update project docs"
+git commit -m "update docs"
 
 git push origin main
 
