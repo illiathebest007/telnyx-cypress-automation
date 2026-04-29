@@ -4,6 +4,6 @@ class BasePage {
     }
     acceptCookies() {
         cy.get('#onetrust-accept-btn-handler').click()
-    }   
+    }
 }
 export default new BasePage() 

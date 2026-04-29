@@ -3,8 +3,8 @@
     "cypress": "^13.6.0"
   },
   "scripts": {
-  "cy:open": "cypress open",
-  "cy:run": "cypress run",
-  "cy:run:cloud": "cypress run --record"
-}
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:cloud": "cypress run --record"
+  }
 }

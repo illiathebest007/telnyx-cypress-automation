@@ -1,9 +1,10 @@
 /// <reference types="cypress" />
 import BasePage from '../support/page_objects/BasePage'
+import BasePage from '../support/page_objects/ContactPage'
 describe('telnyx smoke test cases', () => {
   beforeEach(() => {
-    BasePage.visit(); // Подготовка: зашли
-    BasePage.acceptCookies(); // Подготовка: убрали баннер
+    BasePage.visit();
+    BasePage.acceptCookies();
   });
   it('page loading', () => {
     cy.title().should('include', 'Telnyx')
@@ -17,11 +18,11 @@ describe('telnyx smoke test cases', () => {
     cy.contains('Voice AI Agents').should('be.visible')
   })
   it('full stack animation check', { scrollBehavior: 'top' }, () => {
-    cy.contains('EXPLORE THE STACK', { matchCase: false }).click({force:true})
-    cy.contains('THE FULL STACK', { timeout: 25000}).should('exist')
+    cy.contains('EXPLORE THE STACK', { matchCase: false }).click({ force: true })
+    cy.contains('THE FULL STACK', { timeout: 25000 }).should('exist')
   })
   it('on "full stack" animation click "configure agent"', () => {
-    cy.contains('EXPLORE THE STACK', { matchCase: false }).click({force:true})
+    cy.contains('EXPLORE THE STACK', { matchCase: false }).click({ force: true })
     cy.contains('CONFIGURE AGENT', { timeout: 15000, matchCase: false }).click()
     cy.contains('Configure the environment your agents run in', { matchCase: false }).should('be.visible')
   })
@@ -43,25 +44,26 @@ describe('telnyx smoke test cases', () => {
     cy.contains('Talk to an expert').should('be.visible')
   })
   it('on contact us page fill out the required fields and click submit', () => {
-    cy.visit('/contact-us', {timout:12000})
-    cy.get('#onetrust-accept-btn-handler').click()
-    cy.get('#Reason_for_Contact__c').select('Support')
-    cy.get('#FirstName').type('Illia')
-    cy.get('#LastName').type('Test')
-    cy.get('#Email').type('test@gmail.com')
-    cy.get('#Phone_Number_Extension__c').select('United States (+1)')
-    cy.get('#Phone_Number_Base__c').type('5553434')
-    cy.get('#Website').type('test.test')
-    cy.get('#Form_Additional_Information__c').type('test')
-    cy.get('#How_did_you_hear_about_Telnyx_Open__c').type('test')
-    cy.get('button[type="submit"]').click()
+    const testUser = {
+      reason: 'Support',
+      firstName: 'Illia',
+      lastName: 'Test',
+      email: 'test@gmail.com',
+      phoneExt: 'United States (+1)',
+      phone: '5553434',
+      website: 'test.test',
+      info: 'test',
+      source: 'test'
+    }
+    ContactPage.fillContactForm(testUser)
     cy.get('div.bg-transparent p', { timeout: 15000 }).should('be.visible').and('contain', 'Thank you')
   })
   it('on contact us page click submiting button without filling the fields', () => {
-    cy.visit('/contact-us')
-    cy.get('#onetrust-accept-btn-handler').click()
-    cy.get('button[type="submit"]').click()
-    cy.get('.mktoErrorMsg').should('be.visible').and('contain', 'This field is required.')
+    BasePage.visit('/contact-us')
+    BasePage.acceptCookies()
+
+    ContactPage.submit()
+    ContactPage.verifyErrorMessage('This field is required.')
   })
   it('LinkedIn link', () => {
     cy.get('footer').scrollIntoView()
