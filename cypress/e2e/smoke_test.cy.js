@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 import BasePage from '../support/page_objects/BasePage'
-import СontactPage from '../support/page_objects/ContactPage'
+import ContactPage from '../support/page_objects/ContactPage'
 describe('telnyx smoke test cases', () => {
   beforeEach(() => {
     BasePage.visit();
