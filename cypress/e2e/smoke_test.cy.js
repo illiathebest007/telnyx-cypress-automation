@@ -43,7 +43,7 @@ describe('telnyx smoke test cases', () => {
     cy.contains('Contact us', { matchCase: false }).click({ force: true })
     cy.contains('Talk to an expert').should('be.visible')
   })
-  it.only ('on contact us page fill out the required fields and click submit', () => {
+  it ('on contact us page fill out the required fields and click submit', () => {
     BasePage.visit('/contact-us')
     BasePage.acceptCookies()
     const testUser = {
