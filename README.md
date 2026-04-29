@@ -1,4 +1,4 @@
-# 🚀 Telnyx UI Automation Project
+# Telnyx UI Automation Project
 
 [![Telnyx Smoke Tests](https://github.com/illiathebest007/telnyx-cypress-automation/actions/workflows/main.yaml/badge.svg)](https://github.com/illiathebest007/telnyx-cypress-automation/actions)
 [![Cypress Cloud](https://img.shields.io/badge/Cypress-Cloud-brightgreen)](https://cloud.cypress.io/projects/1oj5xg)
