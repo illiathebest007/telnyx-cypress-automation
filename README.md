@@ -62,7 +62,7 @@ Next steps to make the project production-ready:
 
 [ ] BDD / Gherkin: Integrate Cucumber for better test readability.
 
-[ ] BDD / Gherkin: Add fixtures with testing data
+[ ] Add fixtures with testing data
 
 [ ] Parallelization: Configure multi-threaded execution in CI/CD to save time.
 
