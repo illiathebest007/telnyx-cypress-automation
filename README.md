@@ -56,12 +56,13 @@ git commit -m "your message"
 git push origin main
 ```
 
-✅ Future Improvements (TODO)
+Future Improvements (TODO)
 Next steps to make the project production-ready:
 
-[ ] Page Object Pattern (POP): Refactor to separate UI selectors from test logic.
 
 [ ] BDD / Gherkin: Integrate Cucumber for better test readability.
+
+[ ] BDD / Gherkin: Add fixtures with testing data
 
 [ ] Parallelization: Configure multi-threaded execution in CI/CD to save time.
 
